@@ -1,3 +1,2 @@
 #!/bin/bash
-echo "$PYCODE" > online.py
-python3 online.py
+echo "$PYCODE" > online.py && python3 online.py
