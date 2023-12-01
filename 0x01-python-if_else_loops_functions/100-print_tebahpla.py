@@ -1,10 +1,4 @@
 #!/usr/bin/python3
 
-
-nc = 0
-for n in range(122, 96, -1):
-    if n % 2 == 0:
-        nc = n
-    else:
-        nc = n - 32
-    print("{}".format(chr(nc)), end='')
+for i in range(122, 96, -1):
+    print("{:c}".format(i) if i % 2 == 0 else "{:c}".format(i - 32), end="")
