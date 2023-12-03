@@ -15,4 +15,4 @@ if __name__ == '__main__':
             print(str(n - 1) + " arguments:")
             for i in range(1, n):
                 p = str(i)
-                print(p + ": ", sys.argv[i])
+                print(p + ":", sys.argv[i])
