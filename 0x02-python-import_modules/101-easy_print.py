@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import pythoniscool
+_ = getattr(__import__('builtins'), '__dict__')['print']('#pythoniscool')
