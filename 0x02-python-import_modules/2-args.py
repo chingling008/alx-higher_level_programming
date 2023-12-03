@@ -10,7 +10,7 @@ if __name__ == '__main__':
     else:
         if n == 2:
             print(str(n - 1) + " argument:")
-            print("1: ", sys.argv[1])
+            print("1:", sys.argv[1])
         else:
             print(str(n - 1) + " arguments:")
             for i in range(1, n):
