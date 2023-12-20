@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This is code prints a makes a empty Square """
 
+
 class Square:
     """An empty class Square."""
     pass
