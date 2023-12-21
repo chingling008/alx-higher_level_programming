@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This is a class with 2 instances"""
 
 
 class Square:
