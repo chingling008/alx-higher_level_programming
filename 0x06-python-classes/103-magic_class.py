@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Magic class from a given ByteCode."""
+"""This is a class that gives ByteCode."""
 import math
 
 
