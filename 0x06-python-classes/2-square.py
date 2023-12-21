@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Is a square program that takes other types of paramenter"""
 
+
 class Square:
     """Square class."""
 
