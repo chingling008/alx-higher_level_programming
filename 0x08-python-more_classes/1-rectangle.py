@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""this class is a rectangle"""
 
 class Rectangle:
     """Rectangle class."""

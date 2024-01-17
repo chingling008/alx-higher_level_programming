@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This class has 5 property"""
 
 
 class Rectangle:
