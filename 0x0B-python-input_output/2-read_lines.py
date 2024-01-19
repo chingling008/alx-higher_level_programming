@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This is a python file"""
 
 
 def read_lines(filename="", nb_lines=0):
