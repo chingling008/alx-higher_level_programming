@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""This is a python file"""
 
 def read_file(filename=""):
     """Read file and print lines
