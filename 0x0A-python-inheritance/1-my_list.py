@@ -3,6 +3,7 @@
 
 
 class MyList(list):
+    """This class is documented"""
     def print_sorted(self):
         """Use bubble sort to create a sorted list to print
         Args:
