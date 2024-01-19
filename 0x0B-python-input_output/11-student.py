@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This is a python file"""
 
 
 def class_to_json(obj):
