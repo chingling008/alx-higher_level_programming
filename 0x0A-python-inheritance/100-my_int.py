@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This funtion looks up"""
 
 
 class MyInt(int):
