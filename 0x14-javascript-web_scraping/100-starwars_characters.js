@@ -3,7 +3,7 @@
 const request = require('request');
 
 const options = {
-  url: 'https://swapi-api.alx-tools.com/api/films/'+ process.argv[2],
+  url: 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2],
   headers: {
     'User-Agent': 'request'
   }
@@ -12,13 +12,13 @@ const options = {
 function callback (error, response, body) {
   if (!error && response.statusCode === 200) {
     const data = JSON.parse(body);
-    const chars = data['characters'];
+    const chars = data.characters;
     let i;
     for (i = 0; i < chars.length; i++) {
       request(chars[i], function (error, response, body) {
         if (!error && response.statusCode === 200 && body) {
           const cdata = JSON.parse(body);
-          console.log(cdata['name']);
+          console.log(cdata.name);
         }
       });
     }
