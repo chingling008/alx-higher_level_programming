@@ -3,7 +3,7 @@
 const request = require('request');
 
 const options = {
-  url: 'http://swapi.co/api/films/' + process.argv[2],
+  url: 'https://swapi-api.alx-tools.com/api/films/'+ process.argv[2],
   headers: {
     'User-Agent': 'request'
   }
