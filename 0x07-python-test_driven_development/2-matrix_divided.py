@@ -1,50 +1,30 @@
 #!/usr/bin/python3
-
-""" matrix_divided
-
-Divides all elements of a matrix, returns new matrix
-Floats get converted to integers, all others raise TypeError
+"""
+This is the "2-matrix_divided" module.
+The 2-matrix_divided module supplies one function, matrix_divided(matrix, div).
 """
 
 
 def matrix_divided(matrix, div):
-    """ matrix_divided - divides all elements of a matrix
-    Returns: new matrix
-    """
-    if not isinstance(div, int) and not isinstance(div, float):
+    """Divides all elements in the matrix by div"""
+    if type(matrix) is not list:
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats")
+    size = None
+    for l in matrix:
+        if type(l) is not list:
+            raise TypeError(
+                "matrix must be a matrix (list of lists) of integers/floats")
+        if size is None:
+            size = len(l)
+        elif size != len(l):
+            raise TypeError("Each row of the matrix must have the same size")
+        for i in l:
+            if type(i) is not int and type(i) is not float:
+                raise TypeError("matrix must be a matrix (list of lists) of \
+integers/floats")
+    if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
-    elif div == 0:
+    if div == 0:
         raise ZeroDivisionError("division by zero")
-
-    if matrix is None:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    elif len(matrix) == 0:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    elif len(matrix[0]) == 0:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    else:
-        rows = len(matrix)
-        columns = len(matrix[0])
-        for r in range(rows):
-            if len(matrix[r]) != columns:
-                raise TypeError("Each row of the matrix must have the same size")
-
-        new_matrix = [[0 for i in range(columns)] for j in range(rows)]
-        for r in range(rows):
-            for c in range(columns):
-                n = matrix[r][c]
-                if not isinstance(n, int) and not isinstance(n, float):
-                    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-                else:
-                    new_matrix[r][c] = float("%0.2f" % (n / div))
-
-        return new_matrix
-
-
-if __name__ == '__main__':
-    matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-    ]
-    print(matrix_divided(matrix, 3))
-    print(matrix)
+    return [[round(i / div, 2) for i in l] for l in matrix]
